@@ -1,0 +1,4 @@
+#include "~/.cache/wal/dwm.Xresources"
+dwm.normbgcolor: #FF0FFF 
+dwm.selbgcolor: #00FFFF
+dwm.selbordercolor: #0020FF
