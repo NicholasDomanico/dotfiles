@@ -1,0 +1,5 @@
+dwm.normbgcolor: #{background.strip}
+dwm.normfgcolor: #{color2.strip}
+dwm.selbgcolor: #{color7.strip}
+dwm.selfgcolor: #{background.strip}
+dwm.selbordercolor: #{color2.strip}
