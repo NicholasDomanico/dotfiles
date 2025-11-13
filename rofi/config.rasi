@@ -38,7 +38,7 @@ case-sensitive: false;
 /*	case-smart: false;*/
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
-hover-select: true;
+hover-select: false;
 /*	eh: 1;*/
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
@@ -174,12 +174,16 @@ click-to-exit: true;
 
 window { 
 	width: 45%;
-  border-radius: 10px;
+
+    border: 1px solid;
+    border-color: @selected-active-background;
+    border-radius: 4px;
 	transparency: 50%;
 	orientation: vertical;
 }
 
 mainbox {
+
 	children: [inputbar, listview];
 }
 
@@ -188,6 +192,7 @@ entry {
 }
 
 listview {
+
 	columns: 3;
 	lines: 9;
 	padding: 8 0;
@@ -198,7 +203,7 @@ listview {
 }
 
 element {
-  border-radius: 10px;
+  border-radius: 4px;
   margin: 2px;
   padding: 2px;
 	orientation: "horizontal";
