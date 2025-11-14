@@ -10,7 +10,7 @@ For example:
 ## Requirements
 
 - **[My DWM build](https://github.com/NicholasDomanico/dwm)** (or any DWM build with at least xrdb, statuscmd, and status2d patches)
-- Pywal16 for generating color schemes
+- **[Pywal16](https://github.com/eylles/pywal16)** for generating color schemes
 - feh for setting wallpaper
 - dunst
 - picom for window transparency
