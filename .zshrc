@@ -50,3 +50,6 @@ function y() {
 }
 
 export EDITOR=nvim
+export PATH="$PATH:$HOME/scripts/"
+
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
