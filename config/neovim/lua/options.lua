@@ -16,3 +16,6 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.showmatch = true
+
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
