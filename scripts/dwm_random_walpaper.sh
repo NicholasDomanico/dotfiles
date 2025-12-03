@@ -20,9 +20,10 @@ else
 fi
 
 [ -f "$HOME/.cache/wal/colors.sh" ] && . "$HOME/.cache/wal/colors.sh"
-pidof dunst && killall dunst
-
-/usr/bin/dunst & #> /dev/null 2>&1 &
+killall dunst
+killall dwmblocks
+dwmblocks & /dev/null 2>&1
+/usr/bin/dunst & > /dev/null 2>&1 
     
 
 echo "The Current Wallpaper is: ${WALLPAPER}"
