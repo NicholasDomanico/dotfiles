@@ -4,12 +4,9 @@ WALLPAPER_DIR="$HOME/Pictures/wallpapers/"
 get_random_image() {
     dirlength=$(ls | wc -l)
     if [ $dirlength -gt 0 ]; then
-        random_image=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
-        if echo $(file $random_image) | grep -q -i "image"; then
-            echo $random_image
-        else
-            get_random_image
-        fi
+        random_image=$(ls $WALLPAPER_DIR | grep -E -i -o ".*\.jpg|.*\.jpeg|.*\.png" | shuf -n 1)
+        echo $random_image
+
     elif [ $dirlength -eq 0 ]; then 
         exit
     fi
@@ -41,7 +38,8 @@ else
         feh --bg-fill $WALLPAPER
         sleep 1
         wal -i $WALLPAPER -n
-        xrdb merge ~/.cache/wal/dwm.Xresources
+        xrdb -merge ~/.cache/wal/dwm.Xresources
+        xrdb -merge ~/.cache/wal/colors.Xresources
     fi
 fi
 
