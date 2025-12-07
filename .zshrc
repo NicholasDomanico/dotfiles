@@ -8,18 +8,27 @@ fi
 # Created by newuser for 5.9
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
+setopt inc_append_history
+setopt share_history
+setopt HIST_IGNORE_DUPS
+
 bindkey -e
 
-setopt correct
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+bindkey "^[[3~" delete-char
 
+setopt correct
 
 source ~/zsh_plugins/fzf-tab/fzf-tab.zsh
 source ~/zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/zsh_plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/zsh_plugins/zsh-fzf-history-search/zsh-fzf-history-search.zsh
 source ~/zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
