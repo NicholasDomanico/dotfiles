@@ -18,8 +18,8 @@ setopt HIST_IGNORE_DUPS
 
 bindkey -e
 
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 bindkey "^[[3~" delete-char
 
 setopt correct
@@ -34,8 +34,10 @@ source ~/zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
